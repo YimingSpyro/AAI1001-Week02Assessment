@@ -1,0 +1,98 @@
+---
+title: "Stock Price Explorer"
+format: html
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(jsonlite)
+```
+
+```{r, echo=FALSE}
+df <- read_csv("data/stock_prices.csv", show_col_types = FALSE)
+
+df <- df %>%
+  mutate(date = as.character(as.Date(date))) %>%
+  select(ticker, date, close, volume, sma20, sma50, bb_upper, bb_lower, signal)
+```
+
+```{r, echo=FALSE}
+cat(
+  "<script>\nconst STOCK_DATA = ",
+  toJSON(df, dataframe="rows", auto_unbox=TRUE),
+  ";\n</script>\n"
+)
+```
+
+<select id="tickerSelect"></select>
+
+<canvas id="priceChart" height="300"></canvas>
+<canvas id="volumeChart" height="120"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const data = STOCK_DATA;
+const tickers = [...new Set(data.map(d => d.ticker))].sort();
+const select = document.getElementById("tickerSelect");
+
+tickers.forEach(t => {
+  const o = document.createElement("option");
+  o.value = t;
+  o.text = t;
+  select.appendChild(o);
+});
+
+let priceChart, volumeChart;
+
+function render(ticker) {
+  const rows = data.filter(d => d.ticker === ticker);
+
+  const labels = rows.map(r => r.date);
+  const close = rows.map(r => r.close);
+  const sma20 = rows.map(r => r.sma20);
+  const sma50 = rows.map(r => r.sma50);
+  const bbUpper = rows.map(r => r.bb_upper);
+  const bbLower = rows.map(r => r.bb_lower);
+  const volume = rows.map(r => r.volume);
+
+  const buy = rows.map(r => r.signal === "BUY" ? r.close : null);
+  const sell = rows.map(r => r.signal === "SELL" ? r.close : null);
+
+  if (priceChart) priceChart.destroy();
+  if (volumeChart) volumeChart.destroy();
+
+  priceChart = new Chart(document.getElementById("priceChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {label:"Close", data: close, borderWidth:2},
+        {label:"SMA20", data: sma20, borderDash:[5,5]},
+        {label:"SMA50", data: sma50, borderDash:[2,2]},
+        {label:"BB Upper", data: bbUpper, borderWidth:1},
+        {label:"BB Lower", data: bbLower, borderWidth:1},
+        {label:"Buy", data: buy, type:"scatter", pointRadius:5},
+        {label:"Sell", data: sell, type:"scatter", pointRadius:5}
+      ]
+    }
+  });
+
+  volumeChart = new Chart(document.getElementById("volumeChart"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {label:"Volume", data: volume}
+      ]
+    },
+    options: {
+      scales: { x: { display:false } }
+    }
+  });
+}
+
+select.addEventListener("change", e => render(e.target.value));
+render(tickers[0]);
+</script>

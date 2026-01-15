@@ -1,38 +1,52 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Apple Stock Price",
     "section": "",
-    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nRows: 122545 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (1): ticker\ndbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...\ndttm  (1): created_at\ndate  (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Home",
-    "section": "",
-    "text": "This is my Quarto website.\nThis page is written in Quarto Markdown.\nYou can edit this file to change what appears on the homepage."
+    "objectID": "visualization.html#load-csv",
+    "href": "visualization.html#load-csv",
+    "title": "Apple Stock Price",
+    "section": "Load CSV",
+    "text": "Load CSV\n\n\nRows: 122545 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (1): ticker\ndbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...\ndttm  (1): created_at\ndate  (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
+    "objectID": "visualization.html#fix-excel-date-column",
+    "href": "visualization.html#fix-excel-date-column",
+    "title": "Apple Stock Price",
+    "section": "Fix Excel date column",
+    "text": "Fix Excel date column"
   },
   {
-    "objectID": "about.html#about-this-site",
-    "href": "about.html#about-this-site",
-    "title": "About",
-    "section": "",
-    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
+    "objectID": "visualization.html#filter-apple",
+    "href": "visualization.html#filter-apple",
+    "title": "Apple Stock Price",
+    "section": "Filter Apple",
+    "text": "Filter Apple"
   },
   {
-    "objectID": "index.html#hi-im-yiming",
-    "href": "index.html#hi-im-yiming",
-    "title": "Home",
+    "objectID": "visualization.html#plot-closing-price",
+    "href": "visualization.html#plot-closing-price",
+    "title": "Apple Stock Price",
+    "section": "Plot closing price",
+    "text": "Plot closing price"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+    "text": "Stock Analytics Website\nA web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\nPreschool Educational Game\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\nFacial Recognition (OpenCV & ML)\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
+  },
+  {
+    "objectID": "projects.html#my-project-portfolio",
+    "href": "projects.html#my-project-portfolio",
+    "title": "Projects",
+    "section": "",
+    "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
   },
   {
     "objectID": "experience.html",
@@ -49,25 +63,39 @@
     "text": "I have worked on projects involving:\n\nStock analysis platforms\nAlgorithmic trading strategies\nCloud-based data pipelines\nAI-powered automation\n\n\n\n\n\nMorgan Stanley Code to Give 2025 (1st Place)\nJP Morgan Code for Good 2025 (1st Place)\n\nThese experiences strengthened my skills in: - Python - Data engineering - Cloud computing - AI workflows"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
+    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
   },
   {
-    "objectID": "projects.html#trading-system-demo",
-    "href": "projects.html#trading-system-demo",
-    "title": "Projects",
+    "objectID": "about.html#about-this-site",
+    "href": "about.html#about-this-site",
+    "title": "About",
     "section": "",
-    "text": "This project shows my automated trading system that: - Collects stock data - Computes indicators - Generates signals"
+    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
   },
   {
-    "objectID": "projects.html#ai-stock-analysis-tool",
-    "href": "projects.html#ai-stock-analysis-tool",
-    "title": "Projects",
-    "section": "AI Stock Analysis Tool",
-    "text": "AI Stock Analysis Tool\n\nThis tool uses AI to summarize financial data and news into stock insights."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+  },
+  {
+    "objectID": "index.html#hi-im-yiming",
+    "href": "index.html#hi-im-yiming",
+    "title": "Home",
+    "section": "",
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+  },
+  {
+    "objectID": "index.html#what-i-build",
+    "href": "index.html#what-i-build",
+    "title": "Home",
+    "section": "What I Build",
+    "text": "What I Build\n\n\nLearn More"
   },
   {
     "objectID": "reflections.html",
@@ -103,82 +131,5 @@
     "title": "Reflection on the Use of GenAI",
     "section": "Future use",
     "text": "Future use\nI will continue using GenAI for: - Coding - Data analysis - Technical writing - System design"
-  },
-  {
-    "objectID": "projects.html#stock-analytics-website",
-    "href": "projects.html#stock-analytics-website",
-    "title": "Projects",
-    "section": "",
-    "text": "This project is a web-based stock analysis platform that I built to help investors make data-driven decisions.\nIt includes: - Real-time stock prices - Technical indicators such as RSI, MACD, and Bollinger Bands - Portfolio risk analysis and return tracking - AI-generated summaries of stock performance\nThe system processes numerical financial data and visualizes it using interactive charts, allowing users to quickly understand market trends and portfolio performance.\nVisit my stock website"
-  },
-  {
-    "objectID": "projects.html#preschool-educational-game",
-    "href": "projects.html#preschool-educational-game",
-    "title": "Projects",
-    "section": "🎮 Preschool Educational Game",
-    "text": "🎮 Preschool Educational Game\n\nThis is an educational game for preschool children designed to improve: - Pattern recognition\n- Memory\n- Basic problem solving\nThe game includes: - Interactive graphics - Sound feedback - Progress tracking\nThe goal is to make early learning more engaging through gamification and simple UI design."
-  },
-  {
-    "objectID": "projects.html#facial-recognition-using-opencv-machine-learning",
-    "href": "projects.html#facial-recognition-using-opencv-machine-learning",
-    "title": "Projects",
-    "section": "🧠 Facial Recognition using OpenCV & Machine Learning",
-    "text": "🧠 Facial Recognition using OpenCV & Machine Learning\n\nThis project demonstrates a machine learning–based facial recognition system built using Python and OpenCV.\nThe system: - Detects human faces in real time - Extracts facial features - Trains a model to recognize known individuals - Performs live identity prediction through a webcam\nThis project showcases: - Computer vision - Machine learning - Real-time image processing\nIt is an example of how AI can be used for security, authentication, and human–computer interaction."
-  },
-  {
-    "objectID": "projects.html#my-project-portfolio",
-    "href": "projects.html#my-project-portfolio",
-    "title": "Projects",
-    "section": "",
-    "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
-  },
-  {
-    "objectID": "index.html#what-i-build",
-    "href": "index.html#what-i-build",
-    "title": "Home",
-    "section": "What I Build",
-    "text": "What I Build\n\n\nLearn More"
-  },
-  {
-    "objectID": "projects.html#live-stock-data-visualization",
-    "href": "projects.html#live-stock-data-visualization",
-    "title": "Projects",
-    "section": "📊 Live Stock Data Visualization",
-    "text": "📊 Live Stock Data Visualization\nThis visualization uses historical stock price data exported from my Supabase database.\n\nAAPL\n\n\nstocks &lt;- read.csv(“data/stock_prices.csv”) stocks\\(date &lt;- as.Date(stocks\\)date)\naapl &lt;- stocks[stocks$ticker == “AAPL”, ]\nplot( aapl\\(date,\n  aapl\\)close, type = “l”, col = “#2563eb”, lwd = 2, xlab = “Date”, ylab = “Closing Price”, main = “AAPL Closing Price” )\n\n\nStock Analytics Website\nA web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\nPreschool Educational Game\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\nFacial Recognition (OpenCV & ML)\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
-  },
-  {
-    "objectID": "visualization.html",
-    "href": "visualization.html",
-    "title": "Apple Stock Price",
-    "section": "",
-    "text": "library(readr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)"
-  },
-  {
-    "objectID": "visualization.html#load-csv",
-    "href": "visualization.html#load-csv",
-    "title": "Apple Stock Price",
-    "section": "Load CSV",
-    "text": "Load CSV\n\ndf &lt;- read_csv(\"data/stock_prices.csv\")\n\nRows: 122545 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (1): ticker\ndbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...\ndttm  (1): created_at\ndate  (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
-  },
-  {
-    "objectID": "visualization.html#fix-excel-date-column",
-    "href": "visualization.html#fix-excel-date-column",
-    "title": "Apple Stock Price",
-    "section": "Fix Excel date column",
-    "text": "Fix Excel date column\n\ndf$date &lt;- as.Date(df$date, origin = \"1899-12-30\")"
-  },
-  {
-    "objectID": "visualization.html#filter-apple",
-    "href": "visualization.html#filter-apple",
-    "title": "Apple Stock Price",
-    "section": "Filter Apple",
-    "text": "Filter Apple\n\naapl &lt;- df %&gt;% filter(ticker == \"AAPL\")"
-  },
-  {
-    "objectID": "visualization.html#plot-closing-price",
-    "href": "visualization.html#plot-closing-price",
-    "title": "Apple Stock Price",
-    "section": "Plot closing price",
-    "text": "Plot closing price\n\nggplot(aapl, aes(x = date, y = close)) +\n  geom_line(color = \"steelblue\", linewidth = 1) +\n  labs(\n    title = \"Apple (AAPL) Closing Price\",\n    x = \"Date\",\n    y = \"USD\"\n  ) +\n  theme_minimal()"
   }
 ]

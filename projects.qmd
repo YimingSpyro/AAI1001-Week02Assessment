@@ -2,8 +2,6 @@
 title: "Projects"
 ---
 
-## 🚀 My Project Portfolio
-
 <div class="portfolio-grid">
 
 <div class="project-card">
