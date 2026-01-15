@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building: - Trading algorithms - Data dashboards - AI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
   },
   {
     "objectID": "index.html#welcome",
@@ -32,7 +32,7 @@
     "href": "index.html#hi-im-yiming",
     "title": "Home",
     "section": "",
-    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building: - Trading algorithms - Data dashboards - AI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building:\n\nTrading algorithms\n\nData dashboards\n\nAI-powered tools\n\nThis website showcases my experience, projects, and reflections."
   },
   {
     "objectID": "experience.html",
@@ -131,5 +131,19 @@
     "title": "Projects",
     "section": "",
     "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
+  },
+  {
+    "objectID": "index.html#what-i-build",
+    "href": "index.html#what-i-build",
+    "title": "Home",
+    "section": "What I Build",
+    "text": "What I Build\n\n\nLearn More"
+  },
+  {
+    "objectID": "projects.html#live-stock-data-visualization",
+    "href": "projects.html#live-stock-data-visualization",
+    "title": "Projects",
+    "section": "📊 Live Stock Data Visualization",
+    "text": "📊 Live Stock Data Visualization\nThis visualization uses historical stock price data exported from my Supabase database.\n\nAAPL\n\n\nstocks &lt;- read.csv(“data/stock_prices.csv”) stocks\\(date &lt;- as.Date(stocks\\)date)\naapl &lt;- stocks[stocks$ticker == “AAPL”, ]\nplot( aapl\\(date,\n  aapl\\)close, type = “l”, col = “#2563eb”, lwd = 2, xlab = “Date”, ylab = “Closing Price”, main = “AAPL Closing Price” )\n\n\nStock Analytics Website\nA web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\nPreschool Educational Game\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\nFacial Recognition (OpenCV & ML)\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
   }
 ]

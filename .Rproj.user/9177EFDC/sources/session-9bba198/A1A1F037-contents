@@ -1,0 +1,64 @@
+---
+title: "Projects"
+---
+
+## 🚀 My Project Portfolio
+
+<div class="portfolio-grid">
+
+<div class="project-card">
+
+### Stock Analytics Website
+A **web-based stock analysis platform** for data-driven investing.
+
+<div class="video-wrapper">
+{{< video https://youtu.be/ViUEoi_rfaE >}}
+</div>
+
+It includes:
+- Real-time stock prices  
+- RSI, MACD, Bollinger Bands  
+- Portfolio risk & returns  
+- AI-generated summaries  
+
+<a href="https://trading-algorithm.streamlit.app/" target="_blank" class="project-link">🔗 Live Website</a>
+
+</div>
+
+
+<div class="project-card">
+
+### Preschool Educational Game
+An **interactive educational game** designed for preschool children.
+
+<div class="video-wrapper">
+{{< video https://youtu.be/8nOaPRmUZ1k >}}
+</div>
+
+Features:
+- Pattern recognition  
+- Memory  
+- Problem solving  
+- Engaging UI & sound
+
+</div>
+
+
+<div class="project-card">
+
+### Facial Recognition (OpenCV & ML)
+A **real-time facial recognition system** using Python and OpenCV.
+
+<div class="video-wrapper">
+{{< video https://youtu.be/6xvKgrSK-aE >}}
+</div>
+
+Features:
+- Face detection  
+- Feature extraction  
+- ML identity recognition  
+- Live webcam prediction  
+
+</div>
+
+</div>
