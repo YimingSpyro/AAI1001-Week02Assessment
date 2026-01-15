@@ -1,0 +1,11 @@
+---
+title: "Home"
+---
+
+## Welcome
+
+This is my Quarto website.
+
+This page is written in **Quarto Markdown**.
+
+You can edit this file to change what appears on the homepage.

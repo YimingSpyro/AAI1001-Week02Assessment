@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This is my Quarto website.\nThis page is written in Quarto Markdown.\nYou can edit this file to change what appears on the homepage."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Home",
+    "section": "",
+    "text": "This is my Quarto website.\nThis page is written in Quarto Markdown.\nYou can edit this file to change what appears on the homepage."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
+  },
+  {
+    "objectID": "about.html#about-this-site",
+    "href": "about.html#about-this-site",
+    "title": "About",
+    "section": "",
+    "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
+  }
+]
