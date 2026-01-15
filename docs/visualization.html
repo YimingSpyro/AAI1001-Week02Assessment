@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Yiming | Portfolio</title>
+<title>Apple Stock Price – Yiming | Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,35 +104,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -128,8 +134,12 @@ window.Quarto = {
 <span class="menu-text">Experience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./visualization.html" aria-current="page"> 
+<span class="menu-text">Visualizations</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./reflections.html"> 
@@ -151,8 +161,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-project-portfolio" id="toc-my-project-portfolio" class="nav-link active" data-scroll-target="#my-project-portfolio">🚀 My Project Portfolio</a></li>
-  <li><a href="#live-stock-data-visualization" id="toc-live-stock-data-visualization" class="nav-link" data-scroll-target="#live-stock-data-visualization">📊 Live Stock Data Visualization</a></li>
+  <li><a href="#load-csv" id="toc-load-csv" class="nav-link active" data-scroll-target="#load-csv">Load CSV</a></li>
+  <li><a href="#fix-excel-date-column" id="toc-fix-excel-date-column" class="nav-link" data-scroll-target="#fix-excel-date-column">Fix Excel date column</a></li>
+  <li><a href="#filter-apple" id="toc-filter-apple" class="nav-link" data-scroll-target="#filter-apple">Filter Apple</a></li>
+  <li><a href="#plot-closing-price" id="toc-plot-closing-price" class="nav-link" data-scroll-target="#plot-closing-price">Plot closing price</a></li>
   </ul>
 </nav>
     </div>
@@ -161,7 +173,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Apple Stock Price</h1>
 </div>
 
 
@@ -178,61 +190,76 @@ window.Quarto = {
 </header>
 
 
-<section id="my-project-portfolio" class="level2">
-<h2 class="anchored" data-anchor-id="my-project-portfolio">🚀 My Project Portfolio</h2>
-</section>
-<section id="live-stock-data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="live-stock-data-visualization">📊 Live Stock Data Visualization</h2>
-<p>This visualization uses historical stock price data exported from my <strong>Supabase</strong> database.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">AAPL</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>stocks &lt;- read.csv(“data/stock_prices.csv”) stocks<span class="math inline">\(date &lt;- as.Date(stocks\)</span>date)</p>
-<p>aapl &lt;- stocks[stocks$ticker == “AAPL”, ]</p>
-<p>plot( aapl<span class="math inline">\(date,
-  aapl\)</span>close, type = “l”, col = “#2563eb”, lwd = 2, xlab = “Date”, ylab = “Closing Price”, main = “AAPL Closing Price” )</p>
-<div class="portfolio-grid">
-<section id="stock-analytics-website" class="level3 project-card">
-<h3 class="anchored" data-anchor-id="stock-analytics-website">Stock Analytics Website</h3>
-<p>A <strong>web-based stock analysis platform</strong> for data-driven investing.</p>
-<div class="video-wrapper">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ViUEoi_rfaE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
 </div>
-<p>It includes: - Real-time stock prices<br>
-- RSI, MACD, Bollinger Bands<br>
-- Portfolio risk &amp; returns<br>
-- AI-generated summaries</p>
-<p><a href="https://trading-algorithm.streamlit.app/" target="_blank" class="project-link">🔗 Live Website</a></p>
-</section>
-<section id="preschool-educational-game" class="level3 project-card">
-<h3 class="anchored" data-anchor-id="preschool-educational-game">Preschool Educational Game</h3>
-<p>An <strong>interactive educational game</strong> designed for preschool children.</p>
-<div class="video-wrapper">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/8nOaPRmUZ1k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
 </div>
-<p>Features: - Pattern recognition<br>
-- Memory<br>
-- Problem solving<br>
-- Engaging UI &amp; sound</p>
-</section>
-<section id="facial-recognition-opencv-ml" class="level3 project-card">
-<h3 class="anchored" data-anchor-id="facial-recognition-opencv-ml">Facial Recognition (OpenCV &amp; ML)</h3>
-<p>A <strong>real-time facial recognition system</strong> using Python and OpenCV.</p>
-<div class="video-wrapper">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/6xvKgrSK-aE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
 </div>
-<p>Features: - Face detection<br>
-- Feature extraction<br>
-- ML identity recognition<br>
-- Live webcam prediction</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="load-csv" class="level2">
+<h2 class="anchored" data-anchor-id="load-csv">Load CSV</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/stock_prices.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 122545 Columns: 17
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr   (1): ticker
+dbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...
+dttm  (1): created_at
+date  (1): date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
 </section>
+<section id="fix-excel-date-column" class="level2">
+<h2 class="anchored" data-anchor-id="fix-excel-date-column">Fix Excel date column</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(df<span class="sc">$</span>date, <span class="at">origin =</span> <span class="st">"1899-12-30"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="filter-apple" class="level2">
+<h2 class="anchored" data-anchor-id="filter-apple">Filter Apple</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>aapl <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ticker <span class="sc">==</span> <span class="st">"AAPL"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="plot-closing-price" class="level2">
+<h2 class="anchored" data-anchor-id="plot-closing-price">Plot closing price</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(aapl, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> close)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Apple (AAPL) Closing Price"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"USD"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="visualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 
 
-</div>
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->

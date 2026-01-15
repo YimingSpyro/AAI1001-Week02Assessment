@@ -12,6 +12,8 @@ website:
         text: Experience
       - href: projects.qmd
         text: Projects
+      - href: visualization.qmd
+        text: Visualizations
       - href: reflections.qmd
         text: Reflection
 

@@ -1,0 +1,41 @@
+---
+title: "Apple Stock Price"
+format: html
+---
+
+```{r setup}
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+## Load CSV
+
+```{r}
+df <- read_csv("data/stock_prices.csv")
+```
+
+## Fix Excel date column
+
+```{r}
+df$date <- as.Date(df$date, origin = "1899-12-30")
+```
+
+## Filter Apple
+
+```{r}
+aapl <- df %>% filter(ticker == "AAPL")
+```
+
+## Plot closing price
+
+```{r}
+ggplot(aapl, aes(x = date, y = close)) +
+  geom_line(color = "steelblue", linewidth = 1) +
+  labs(
+    title = "Apple (AAPL) Closing Price",
+    x = "Date",
+    y = "USD"
+  ) +
+  theme_minimal()
+```

@@ -145,5 +145,40 @@
     "title": "Projects",
     "section": "📊 Live Stock Data Visualization",
     "text": "📊 Live Stock Data Visualization\nThis visualization uses historical stock price data exported from my Supabase database.\n\nAAPL\n\n\nstocks &lt;- read.csv(“data/stock_prices.csv”) stocks\\(date &lt;- as.Date(stocks\\)date)\naapl &lt;- stocks[stocks$ticker == “AAPL”, ]\nplot( aapl\\(date,\n  aapl\\)close, type = “l”, col = “#2563eb”, lwd = 2, xlab = “Date”, ylab = “Closing Price”, main = “AAPL Closing Price” )\n\n\nStock Analytics Website\nA web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\nPreschool Educational Game\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\nFacial Recognition (OpenCV & ML)\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
+  },
+  {
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Apple Stock Price",
+    "section": "",
+    "text": "library(readr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "visualization.html#load-csv",
+    "href": "visualization.html#load-csv",
+    "title": "Apple Stock Price",
+    "section": "Load CSV",
+    "text": "Load CSV\n\ndf &lt;- read_csv(\"data/stock_prices.csv\")\n\nRows: 122545 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (1): ticker\ndbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...\ndttm  (1): created_at\ndate  (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "visualization.html#fix-excel-date-column",
+    "href": "visualization.html#fix-excel-date-column",
+    "title": "Apple Stock Price",
+    "section": "Fix Excel date column",
+    "text": "Fix Excel date column\n\ndf$date &lt;- as.Date(df$date, origin = \"1899-12-30\")"
+  },
+  {
+    "objectID": "visualization.html#filter-apple",
+    "href": "visualization.html#filter-apple",
+    "title": "Apple Stock Price",
+    "section": "Filter Apple",
+    "text": "Filter Apple\n\naapl &lt;- df %&gt;% filter(ticker == \"AAPL\")"
+  },
+  {
+    "objectID": "visualization.html#plot-closing-price",
+    "href": "visualization.html#plot-closing-price",
+    "title": "Apple Stock Price",
+    "section": "Plot closing price",
+    "text": "Plot closing price\n\nggplot(aapl, aes(x = date, y = close)) +\n  geom_line(color = \"steelblue\", linewidth = 1) +\n  labs(\n    title = \"Apple (AAPL) Closing Price\",\n    x = \"Date\",\n    y = \"USD\"\n  ) +\n  theme_minimal()"
   }
 ]

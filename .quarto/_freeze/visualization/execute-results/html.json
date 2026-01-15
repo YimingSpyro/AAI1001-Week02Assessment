@@ -1,0 +1,17 @@
+{
+  "hash": "bd224dbb93ca26da3c2e4bde9a8e55dc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Apple Stock Price\"\nformat: html\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(readr)\nlibrary(dplyr)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n\nAttaching package: 'dplyr'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(ggplot2)\n```\n:::\n\n\n## Load CSV\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndf <- read_csv(\"data/stock_prices.csv\")\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nRows: 122545 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (1): ticker\ndbl  (14): open, high, low, close, adj_close, volume, sma20, sma50, bb_upper...\ndttm  (1): created_at\ndate  (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n```\n\n\n:::\n:::\n\n\n## Fix Excel date column\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndf$date <- as.Date(df$date, origin = \"1899-12-30\")\n```\n:::\n\n\n## Filter Apple\n\n\n::: {.cell}\n\n```{.r .cell-code}\naapl <- df %>% filter(ticker == \"AAPL\")\n```\n:::\n\n\n## Plot closing price\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(aapl, aes(x = date, y = close)) +\n  geom_line(color = \"steelblue\", linewidth = 1) +\n  labs(\n    title = \"Apple (AAPL) Closing Price\",\n    x = \"Date\",\n    y = \"USD\"\n  ) +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](visualization_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n",
+    "supporting": [
+      "visualization_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
