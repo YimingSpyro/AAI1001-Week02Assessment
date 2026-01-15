@@ -3,15 +3,21 @@ project:
   output-dir: docs
 
 website:
-  title: "My Quarto Website"
+  title: "Yiming | Portfolio"
   navbar:
     left:
-      - text: Home
-        href: index.qmd
-      - text: About
-        href: about.qmd
+      - href: index.qmd
+        text: Home
+      - href: experience.qmd
+        text: Experience
+      - href: projects.qmd
+        text: Projects
+      - href: reflections.qmd
+        text: Reflection
 
 format:
   html:
-    css: style.css
     theme: cosmo
+    css: style.css
+    toc: true
+    toc-depth: 3

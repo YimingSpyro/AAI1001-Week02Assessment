@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "This is my Quarto website.\nThis page is written in Quarto Markdown.\nYou can edit this file to change what appears on the homepage."
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building: - Trading algorithms - Data dashboards - AI-powered tools\n\nThis website showcases my experience, projects, and reflections."
   },
   {
     "objectID": "index.html#welcome",
@@ -26,5 +26,110 @@
     "title": "About",
     "section": "",
     "text": "This website was built using Quarto and RStudio.\nYou can use Quarto to build: - Websites - Reports - Blogs - Dashboards"
+  },
+  {
+    "objectID": "index.html#hi-im-yiming",
+    "href": "index.html#hi-im-yiming",
+    "title": "Home",
+    "section": "",
+    "text": "I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in AI, finance, and software engineering.\nI enjoy building: - Trading algorithms - Data dashboards - AI-powered tools\n\nThis website showcases my experience, projects, and reflections."
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Experience",
+    "section": "",
+    "text": "I have worked on projects involving:\n\nStock analysis platforms\nAlgorithmic trading strategies\nCloud-based data pipelines\nAI-powered automation\n\n\n\n\n\nMorgan Stanley Code to Give 2025 (1st Place)\nJP Morgan Code for Good 2025 (1st Place)\n\nThese experiences strengthened my skills in: - Python - Data engineering - Cloud computing - AI workflows"
+  },
+  {
+    "objectID": "experience.html#my-experience",
+    "href": "experience.html#my-experience",
+    "title": "Experience",
+    "section": "",
+    "text": "I have worked on projects involving:\n\nStock analysis platforms\nAlgorithmic trading strategies\nCloud-based data pipelines\nAI-powered automation\n\n\n\n\n\nMorgan Stanley Code to Give 2025 (1st Place)\nJP Morgan Code for Good 2025 (1st Place)\n\nThese experiences strengthened my skills in: - Python - Data engineering - Cloud computing - AI workflows"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
+  },
+  {
+    "objectID": "projects.html#trading-system-demo",
+    "href": "projects.html#trading-system-demo",
+    "title": "Projects",
+    "section": "",
+    "text": "This project shows my automated trading system that: - Collects stock data - Computes indicators - Generates signals"
+  },
+  {
+    "objectID": "projects.html#ai-stock-analysis-tool",
+    "href": "projects.html#ai-stock-analysis-tool",
+    "title": "Projects",
+    "section": "AI Stock Analysis Tool",
+    "text": "AI Stock Analysis Tool\n\nThis tool uses AI to summarize financial data and news into stock insights."
+  },
+  {
+    "objectID": "reflections.html",
+    "href": "reflections.html",
+    "title": "Reflection on the Use of GenAI",
+    "section": "",
+    "text": "I used ChatGPT to help me: - Structure my Quarto website - Write clean Markdown - Organize my portfolio pages"
+  },
+  {
+    "objectID": "reflections.html#how-i-used-genai",
+    "href": "reflections.html#how-i-used-genai",
+    "title": "Reflection on the Use of GenAI",
+    "section": "",
+    "text": "I used ChatGPT to help me: - Structure my Quarto website - Write clean Markdown - Organize my portfolio pages"
+  },
+  {
+    "objectID": "reflections.html#benefits",
+    "href": "reflections.html#benefits",
+    "title": "Reflection on the Use of GenAI",
+    "section": "Benefits",
+    "text": "Benefits\nGenAI helped me quickly: - Convert ideas into formatted web pages - Debug Quarto and GitHub issues - Improve clarity of writing"
+  },
+  {
+    "objectID": "reflections.html#challenges",
+    "href": "reflections.html#challenges",
+    "title": "Reflection on the Use of GenAI",
+    "section": "Challenges",
+    "text": "Challenges\nSometimes the output needed: - Verification - Adjustments for technical accuracy"
+  },
+  {
+    "objectID": "reflections.html#future-use",
+    "href": "reflections.html#future-use",
+    "title": "Reflection on the Use of GenAI",
+    "section": "Future use",
+    "text": "Future use\nI will continue using GenAI for: - Coding - Data analysis - Technical writing - System design"
+  },
+  {
+    "objectID": "projects.html#stock-analytics-website",
+    "href": "projects.html#stock-analytics-website",
+    "title": "Projects",
+    "section": "",
+    "text": "This project is a web-based stock analysis platform that I built to help investors make data-driven decisions.\nIt includes: - Real-time stock prices - Technical indicators such as RSI, MACD, and Bollinger Bands - Portfolio risk analysis and return tracking - AI-generated summaries of stock performance\nThe system processes numerical financial data and visualizes it using interactive charts, allowing users to quickly understand market trends and portfolio performance.\nVisit my stock website"
+  },
+  {
+    "objectID": "projects.html#preschool-educational-game",
+    "href": "projects.html#preschool-educational-game",
+    "title": "Projects",
+    "section": "🎮 Preschool Educational Game",
+    "text": "🎮 Preschool Educational Game\n\nThis is an educational game for preschool children designed to improve: - Pattern recognition\n- Memory\n- Basic problem solving\nThe game includes: - Interactive graphics - Sound feedback - Progress tracking\nThe goal is to make early learning more engaging through gamification and simple UI design."
+  },
+  {
+    "objectID": "projects.html#facial-recognition-using-opencv-machine-learning",
+    "href": "projects.html#facial-recognition-using-opencv-machine-learning",
+    "title": "Projects",
+    "section": "🧠 Facial Recognition using OpenCV & Machine Learning",
+    "text": "🧠 Facial Recognition using OpenCV & Machine Learning\n\nThis project demonstrates a machine learning–based facial recognition system built using Python and OpenCV.\nThe system: - Detects human faces in real time - Extracts facial features - Trains a model to recognize known individuals - Performs live identity prediction through a webcam\nThis project showcases: - Computer vision - Machine learning - Real-time image processing\nIt is an example of how AI can be used for security, authentication, and human–computer interaction."
+  },
+  {
+    "objectID": "projects.html#my-project-portfolio",
+    "href": "projects.html#my-project-portfolio",
+    "title": "Projects",
+    "section": "",
+    "text": "A web-based stock analysis platform for data-driven investing.\n\n\n\nIt includes: - Real-time stock prices\n- RSI, MACD, Bollinger Bands\n- Portfolio risk & returns\n- AI-generated summaries\n🔗 Live Website\n\n\n\nAn interactive educational game designed for preschool children.\n\n\n\nFeatures: - Pattern recognition\n- Memory\n- Problem solving\n- Engaging UI & sound\n\n\n\nA real-time facial recognition system using Python and OpenCV.\n\n\n\nFeatures: - Face detection\n- Feature extraction\n- ML identity recognition\n- Live webcam prediction"
   }
 ]

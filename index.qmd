@@ -2,10 +2,15 @@
 title: "Home"
 ---
 
-## Welcome
+## Hi, I'm Yiming
 
-This is my Quarto website.
+I am a FinTech and Applied Computing student at Singapore Institute of Technology (SIT) with a strong interest in **AI, finance, and software engineering**.
 
-This page is written in **Quarto Markdown**.
+I enjoy building:
+- Trading algorithms
+- Data dashboards
+- AI-powered tools
 
-You can edit this file to change what appears on the homepage.
+![](1.png){width=100%}
+
+This website showcases my **experience, projects, and reflections**.
